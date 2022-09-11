@@ -1,0 +1,371 @@
+@import url(https://fonts.googleapis.com/css?family=Teko:300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:regular,500,600,700);
+
+
+/* Variables to be used throught the whole code */
+
+:root{
+    --font-principal: 'Teko';
+    --font-cursiva: 'Dancing Script';
+    --gris600: #2f2e2e;
+    --gris200: #706D6D;
+
+}
+
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--gris600);
+}
+
+a{
+    text-decoration: none;
+}
+
+h1,h2{
+    font-family: var(--font-principal);
+}
+
+h3{
+    font-family: var(--font-cursiva);
+}
+
+/* Buttons */
+.btn{
+    background: transparent;
+    width: 130px;
+    height: 42px;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+/* For light buttons */
+.light{
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+/* For dark buttons */
+.dark{
+    color: var(--gris600);
+    border: 2px solid var(--gris600);
+}
+
+.btn:hover{
+    background: var(--gris600);
+    border: 2px solid var(--gris600);
+    color: #ffffff;
+
+}
+
+/* Grid */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    height: 100%;
+}
+
+.container-center{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.span6{
+    grid-column: span 6;
+}
+
+/* Sections */
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh; /* vh viewheight */
+}
+
+/* Nav Menu */
+nav{
+    position: fixed; /* Menu will always be fixed on the screen */
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background:#248c9a;;
+    z-index: 3; /* Menu will be always on top of the rest of the elements when scrolling down */
+}
+
+nav .grid{
+    justify-items: start;
+    align-items: center;
+
+}
+
+nav .links{
+    grid-column: span 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .links a{
+    margin-right: 20px;
+    font-family: var(--font-principal);
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #d6d6d6;
+    letter-spacing: 1px;
+    transition: all .5s; /* hovering */
+}
+
+nav .links a:hover{
+    color: var(--gris200);
+}
+
+/* Social media Icons */
+.social{
+    grid-column: span 2; /* is going to move two columns to the right */
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.social a{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #000000;
+    color: #ffffff;
+    display: flex; /* will align the icons to the center of each black circle */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header */
+
+header{
+    position: relative;  /* relative means I can place it whenever I want */
+    width: 100%; /* Is gonna get a 100% of this container */
+    height: 100vh;
+    background-color: #248c9a;
+}
+
+header::before{
+    content: '';
+    margin-top: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/TheatreBackground\ copy.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header .grid{
+    justify-items: center;
+    align-items: center;
+}
+
+header .text-content{
+    padding: 200px 0 0 0; /* 200 px on top and 0 on each side */
+}
+
+.text-content{  /* elements will be center on the grid column left  */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* text elements one on top of each other */
+    z-index: 1; /* text is in front of our image */
+
+}
+
+.full{/* full class is general so is going to move along the website's width  */
+    grid-column: span 12;
+
+}
+
+.full h1{
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 70px;
+    letter-spacing: 20px;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.full h2{
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-weight: 100;
+    line-height: 0.1;
+
+}
+
+header .text-content h3{
+    position: absolute; /* to place it whenever I want within the header contain */
+    bottom: 50px; /* to place it at the bottom */
+    right: 0;
+    font-size: 50px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* About us */
+.about div.background{
+    background: url(../images/pt-01.png);
+    
+}
+
+.background{
+    background-size: cover !important;
+    background-position: right !important;
+    
+}
+
+ .lateral{
+    padding: 0 50px;
+}
+
+.lateral h1{
+    font-size: 55px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1;
+    text-align: center;
+}
+
+.lateral h3{
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.lateral p{
+    font-size: 20px;
+    margin: 20px 0; /* 20 pixels on top and botton and 0 pixels on both sides */
+    text-align: center;
+    letter-spacing: 0.5px;
+    
+}
+
+/* Shows */
+
+.shows{
+    background: #d5422f;
+}
+
+.shows::before{ /* Pseudo-Element */
+    content: '';
+    position: absolute; /* main section is relative so this has to be absolute */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/ozwizard.png);
+    /* background-size: contain;*/
+    background-attachment: fixed; 
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+/* Current shows image */
+.book .background{
+    background: url(../images/lionking-01.png);
+}
+
+
+/* Footer */
+footer{
+    width: 100%;
+    height: 400px;
+    background-color: #248c9a;  
+    position: relative;
+    width: 100%;
+    height: 100vh; /* vh viewheight */
+    
+    
+}
+
+footer .grid{
+    grid-template-columns: repeat(5, 1fr); /* 5 columns 1fr each */
+    gap: 20px;
+    justify-content: center;
+    align-content: center;
+}
+
+footer h2{
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #d6d6d6;
+}
+footer p{
+    margin: 10px 0;
+    font-weight: 400;
+    
+}
+
+footer ul{
+    margin: 10px 0;
+    list-style: none;
+    color: #d6d6d6;
+}
+
+footer ul li a:hover{
+    text-decoration: underline;
+}
+
+footer input{
+    margin: 10px 0;
+}
+
+footer input{
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+}
+
+footer input ::placeholder{
+    letter-spacing: 1px;
+    color: var(--gris600);
+}
+
+footer.btn{
+    width: 100%;
+}
+
+footer .social{
+    justify-content: flex-start;
+}
+
+/* Footer Copyright */
+div.copy{
+    width: 100%;
+    height: 35px;
+    background: #000000;
+    display: grid;
+    grid-template-columns: 100%; /* Is going to use a column which will take a 100% of all the 12 columns */
+    justify-items: center;
+    align-items: center;
+}
+
+div.copy p{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    font-weight: 600px;
+}

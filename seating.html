@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--add Title for website-->
+    <title>Seating Theatre</title>     
+   
+    <!-- add website icon tab here -->
+    <link rel="icon" href="images/large logo.png">
+    <!-- add website icons here -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+      <!-- add style here -->
+    <link rel="stylesheet" href="css/seating.css">
+
+
+ </head>
+<body>
+
+    <!--Nav-->
+    <nav>
+        <div class="grid container-center">
+            <div class="links">
+                <a href="index.html"> Home </a>
+                <a href="showlist.html"> Shows </a>
+                <a href="lionking.html"> Booking </a>
+                <a href="contact.html"> Contact Us </a>
+
+            </div>
+
+            <div class="social">
+                <a href="" class="fab fa-facebook"></a>
+                <a href="" class="fab fa-twitter"></a>
+                <a href="" class="fab fa-instagram"></a>
+            </div>
+        </div>
+    </nav>
+ 
+<!--Header-->
+<header>
+    <div class="grid container-center"> 
+        <div class="text-content full">
+            <h3>#theatre</h3>
+            <h2>Playhouse</h2>
+            <h1>Booking</h1>
+            <button class="btn light">Book Now</button>
+        </div>
+    
+    </div>    
+
+</header>
+
+
+<!--Section - Shows-->
+<section class="movie-container">
+    <div class="text-content full">
+        <h1 class="select">Select a show</h1>
+        <select id="movie">
+            <option value="25">Wizard Of Oz ($25)</option>
+            <option value="35">Phantom Of The Opera ($35)</option>
+            <option value="30">Wizard Of Oz ($30)</option>
+        </select>
+        
+        <ul class="showcase">
+            <li>
+                <div class="seat"></div>
+                <small>N/A</small> <!--N/A not selected-->
+            </li>
+
+            <li>
+                <div class="seat selected"></div>
+                <small>Selected</small> <!--N/A not selected-->
+            </li>
+
+            <li>
+                <div class="seat occupied"></div>
+                <small>Occupied</small> 
+            </li>
+
+        </ul>
+
+        <div class="container">
+            <div class="screen"></div>
+            <div class="row"> <!--rows for the theatre map-->
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+
+            <div class="row"> <!--rows for the theatre map-->
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+
+            <div class="row"> <!--rows for the theatre map-->
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+
+            <div class="row"> <!--rows for the theatre map-->
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+
+            <div class="row"> <!--rows for the theatre map-->
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+            </div>
+
+            <div class="row"> <!--rows for the theatre map-->
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+                <div class="seat occupied"></div>
+            </div>
+
+        </div>
+
+        <p class="text">
+            You have selected <span id="count"> 0 </span> seats for a price of $<span id="total">0</span>
+             <!--Span Id will represent how much cost the tickets according to the show-->
+        </p>
+
+        <div class="buttons">
+            <button class="btn light">Previous</button>
+        <button class="btn light">Next</button>
+
+        </div>
+
+
+        
+    </div>
+</section>
+
+
+
+<!--Footer-->
+<footer>
+<div class="grid container-center">
+
+    <div class="items">
+        <h2>Address</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, recusandae.</p>
+    </div>
+
+    <div class="items">
+        <h2>About</h2>
+        <ul>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Our Shows</a></li>
+            <li><a href="">Our History</a></li>
+            <li><a href="">Our Team</a></li>
+        </ul>
+    </div>
+
+    <div class="items">
+        <h2>Contact</h2>
+        <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="">FAQs</a></li>
+            
+        </ul>
+    </div>
+
+    <div class="items">
+        <h2>Playhouse Theatre Club</h2>
+        <ul>
+            <li><a href="">Join our loyalty Club</a></li>            
+        </ul>
+    
+
+    <div class="social">        
+            <a href="" class="fab fa-facebook"></a>
+            <a href="" class="fab fa-twitter"></a>
+            <a href="" class="fab fa-instagram"></a> 
+    </div>
+</div>
+
+    <div class="item subs">    
+        <h2>Subscribe</h2>
+        <input type="text" placeholder="Enter your email here">
+        <button class="btn dark"> Send</button> 
+        
+
+</div>
+</footer>
+
+
+
+</div>
+
+<!--Footer Copyright-->
+<div class="copy">
+    <p>© 2022. All Rights Reserved</p>
+</div>
+
+
+<script src="js/seating.js"></script>
+    
+</body>
+</html>

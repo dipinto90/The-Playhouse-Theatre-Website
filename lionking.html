@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--add Title for website-->
+    <title>Playhouse Theatre Shows</title>
+   
+    <!-- add website icon tab here -->
+    <link rel="icon" href="images/large logo.png">
+    <!-- add website icons here -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+      <!-- add style here -->
+    <link rel="stylesheet" href="css/lionking.css">
+ <!-- add Flatpicker here -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://kit.fontawesome.com/6a2afa05cc.js" crossorigin="anonymous"></script>
+
+
+ </head>
+<body>
+
+    <!--Nav-->
+    <nav>
+        <div class="grid container-center">
+            <div class="links">
+                <a href="index.html"> Home </a>
+                <a href="showlist.html"> Shows </a>
+                <a href="lionking.html"> Booking </a>
+                <a href="contact.html"> Contact Us </a>
+
+            </div>
+
+            <div class="social">
+                <a href="" class="fab fa-facebook"></a>
+                <a href="" class="fab fa-twitter"></a>
+                <a href="" class="fab fa-instagram"></a>
+            </div>
+        </div>
+    </nav>
+ 
+<!--Header-->
+<header>
+    <div class="grid container-center"> 
+        <div class="text-content full">
+            <h3>#lionking</h3>
+            <h2>The</h2>
+            <h1>Lion King</h1>            
+        </div>
+    
+    </div>    
+
+</header>
+
+<!--Section - Book Shows-->
+<section class="book">
+    <div class="grid">
+        <div class="span6">
+            <div class="text-content lateral">
+                <h1>The Lion King</h1>
+                <h3>in Playhouse Theatre!</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                
+               
+                <button class="btn dark">Book Now</button>
+            </div>
+        </div>
+        <div class="span6 background">
+            <div class="iframe-container">
+            <iframe src="https://www.youtube.com/embed/o_VPnwAsQDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        </div>
+    </div>
+</section>
+
+
+<!--Section - Shows-->
+<section class="shows">
+    <div class="text-content full">
+        
+        <h1>Sign Up</h1>
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-form">
+                    <!--Here we are creating a register form-->
+                    <form class="register-form" id="register-form" action="#">
+                        <div class="form-group">
+                            <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="name" id="name" placeholder="Your Name" />
+                        </div>
+                        <!-- Here is the Email input -->
+                        <div class="form-group">
+                            <label for="email"><i class="zmdi zmdi-email"></i></label>
+                            
+                            <!-- For any email that ends in gmail.com -->
+                            <input type="email" name="email" id="email" placeholder="Your Email"
+                                pattern=".+@gmail\.com" required />
+                            
+                        </div>
+                        <!-- This is for the password input -->
+                        <div class="form-group">
+                            <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                            <input type="password" name="pass" id="pass" placeholder="Password" />
+                        </div>
+                        <!-- This is another input for confirming and repeating the password -->
+                        <div class="form-group">
+                            <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                            <input type="password" name="re_pass" id="re_pass" placeholder="Repeat your password" />
+                        </div>
+                        <!-- This is the checkbox element for agreeing terms and conditions -->
+                        <div class="form-group">
+                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                            <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all
+                                statements in <a href="#" class="term-service">Terms of service</a></label>
+                        </div>
+
+                        <div class="signup-image">
+                        <!-- This is another link if users have already an account with the Theatre -->
+                    
+                            <a href="#" class="signup-image-link">I am already member</a>
+                        </div>
+                        <!-- This is the Register button -->
+
+                        <div class="form-group form-button">
+                            <input type="submit" name="signup" id="signup" class="show-modal" value="Register" />
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+        
+        <!--Thank You Modal-->
+
+<div class="modalTwo hidden" id="modal-hidden">
+  <button class="close-modal">&times;</button>
+
+
+  <div class="iconTwo">
+    <i class="fa-solid fa-check fa-xl"></i>    
+  </div>
+
+    <div class="titleTwo">
+      Thank you!
+    </div>
+    <div class="descriptionTwo">
+      For Register with Us!
+    </div>
+</div>
+
+</div>  
+
+<div class="overlayTwo hidden"></div>
+
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+<!--Section - About Playhouse Theatre-->
+<section class="calendar-section">
+    
+    <div class="text-content">
+        
+        <h1 class="calendarr">Booking Date Times</h1>
+
+        <p class="select">Select your tickets date and time from the calendar by clicking the button down below</p>
+
+    <div class="calendar">
+        <date-picker format="MMMM DD (DDD), YYYY"></date-picker>
+
+<a href="https://youtu.be/g1Zd0Y7OJuI" style="position: fixed; bottom: 25px; left: 25px; color: #222; text-shadow: 0 0 1px #222;" target="_blank"></a>
+
+
+    </div>
+
+    <a href="showlist.html">
+    <div class="buttons">
+        <button class="btn dark">Previous</button></a>
+
+    <a href="seating.html">
+    <button class="btn dark">Next</button></a>
+
+    </div>
+
+    
+</section>
+
+
+<!--Footer-->
+<footer>
+<div class="grid container-center">
+
+    <div class="items">
+        <h2>Address</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, recusandae.</p>
+    </div>
+
+    <div class="items">
+        <h2>About</h2>
+        <ul>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Our Shows</a></li>
+            <li><a href="">Our History</a></li>
+            <li><a href="">Our Team</a></li>
+        </ul>
+    </div>
+
+    <div class="items">
+        <h2>Contact</h2>
+        <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="">FAQs</a></li>
+            
+        </ul>
+    </div>
+
+    <div class="items">
+        <h2>Playhouse Theatre Club</h2>
+        <ul>
+            <li><a href="">Join our loyalty Club</a></li>            
+        </ul>
+    
+
+    <div class="social">        
+            <a href="" class="fab fa-facebook"></a>
+            <a href="" class="fab fa-twitter"></a>
+            <a href="" class="fab fa-instagram"></a> 
+    </div>
+</div>
+
+    <div class="item subs">    
+        <h2>Subscribe</h2>
+        <input type="text" placeholder="Enter your email here">
+        <button class="btn dark"> Send</button> 
+        
+
+</div>
+</footer>
+
+
+
+</div>
+
+<!--Footer Copyright-->
+<div class="copy">
+    <p>© 2022. All Rights Reserved</p>
+</div>
+
+<!--JavaScript-->
+
+<script src="js/calendar.js"></script>
+<script src="js/signup.js"></script>
+<script src="js/modal.js"></script>
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,528 @@
+@import url(https://fonts.googleapis.com/css?family=Teko:300,regular,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script:regular,500,600,700);
+
+
+/* Variables to be used throught the whole code */
+
+:root{
+    --font-principal: 'Teko';
+    --font-cursiva: 'Dancing Script';
+    --gris600: #2f2e2e;
+    --gris200: #706D6D;
+
+}
+
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--gris600);
+}
+
+a{
+    text-decoration: none;
+}
+
+h1,h2{
+    font-family: var(--font-principal);
+}
+
+h3{
+    font-family: var(--font-cursiva);
+}
+
+
+.text-content{  /* elements will be center on the grid column left  */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* text elements one on top of each other */
+    z-index: 1; /* text is in front of our image */
+
+}
+
+.full{/* full class is general so is going to move along the website's width  */
+    grid-column: span 12;
+
+}
+
+.full h1{
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 70px;
+    letter-spacing: 20px;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.full h2{
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 2px;
+    font-weight: 100;
+    line-height: 0.1;
+
+}
+
+
+/* Buttons */
+.btn{
+    background: transparent;
+    width: 130px;
+    height: 42px;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+/* For light buttons */
+.light{
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    font-size: 14px;
+}
+
+/* For dark buttons */
+.dark{
+    color: var(--gris600);
+    border: 2px solid var(--gris600);
+    font-size: 14px;
+    
+}
+
+.btn:hover{
+    background: var(--gris600);
+    border: 2px solid var(--gris600);
+    color: #ffffff;
+
+}
+
+/* Grid */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    height: 100%;
+}
+
+.container-center{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.span6{
+    grid-column: span 6;
+}
+
+/* Sections */
+
+/* Nav Menu */
+nav{
+    position: fixed; /* Menu will always be fixed on the screen */
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background:#248c9a;;
+    z-index: 3; /* Menu will be always on top of the rest of the elements when scrolling down */
+}
+
+nav .grid{
+    justify-items: start;
+    align-items: center;
+
+}
+
+nav .links{
+    grid-column: span 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .links a{
+    margin-right: 20px;
+    font-family: var(--font-principal);
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #d6d6d6;
+    letter-spacing: 1px;
+    transition: all .5s; /* hovering */
+}
+
+nav .links a:hover{
+    color: var(--gris200);
+}
+
+/* Social media Icons */
+.social{
+    grid-column: span 2; /* is going to move two columns to the right */
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.social a{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background:  #2c2a30;
+    color: #ffffff;
+    display: flex; /* will align the icons to the center of each black circle */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header */
+
+header{
+    position: relative;  /* relative means I can place it whenever I want */
+    width: 100%; /* Is gonna get a 100% of this container */
+    height: 100vh;
+    
+}
+
+header::before{
+    content: '';
+    margin-top: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;    
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header .grid{
+    justify-items: center;
+    align-items: center;
+}
+
+
+/* Carousel */
+.carousel-container {
+    width: 100%;
+    height: 100vh;
+    
+  }
+  
+  .navigation .prev {
+    position: absolute;
+    font-size: 1rem;
+    top: 45%;
+    left: 3%;
+    /* 700 == bold */
+    font-weight: 700;
+    z-index: 9999;
+    width: auto;
+    user-select: none;
+  }
+  
+  .navigation .next {
+    position: absolute;
+    top: 45%;
+    right: 0;
+    font-size: 1rem;
+    z-index: 9999;
+    width: auto;
+    user-select: none;
+  }
+  
+  .navigation .nav-btn {
+    background: rgba(173, 159, 159, 0.65);
+    cursor: pointer;
+    border-radius: 0 3px 3px 0;
+    width: 40px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 5px; */
+    /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4); */
+  }
+  
+  .navigation .nav-btn:hover {
+    background-color: white;
+  }
+  
+  .carousel {
+    margin-top: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .carousel img {
+    width: 100%;    
+    transition: all 0.3s ease;    
+    display: block;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+   
+    
+  }
+
+  
+  .item {
+    position: relative;
+    display: none;
+  }
+  
+  .main {
+    display: block;
+  }
+  
+  .caption {
+    position: absolute;
+    bottom: 10px;
+    display: flex;   
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);     
+    width: 100%;   
+    font-family: var(--font-principal);
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #d6d6d6;
+    letter-spacing: 1px;
+    transition: all .5s; /* hovering */
+    
+  }
+  
+ 
+
+/* Sign up */
+/* React Search Bar */
+
+.shows{
+    background: #d5422f;
+    position: relative;
+    width: 100%;
+    height: 100vh; /* vh viewheight */
+    
+}
+
+.shows::before{ /* Pseudo-Element */
+    content: '';
+    position: absolute; /* main section is relative so this has to be absolute */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+
+}
+
+
+.searchbar{
+    margin: 20px;
+}
+/* Movies section */
+
+.gallery{
+    width: 100%;
+    height: 230vh;
+    position: relative;
+    background-color: #2c2a30;
+    
+}
+
+.container-gallery{
+    
+    margin: 50px;
+}
+
+.gallery-text{
+    padding: 10rem 0;
+    background-color: #ffffff;
+
+}
+
+ 
+.gallery-text div:first-child h2{
+  width: 74%;
+  margin: auto;
+  text-align: center;
+  color: rgb(39, 39, 46);  
+  font-size: 2.8rem;
+  font-weight: 700;
+  
+
+}
+
+
+.gallery-description{
+    width: 45%;
+    margin: auto;
+    padding-top: 1.2rem;
+    color: rgb(39, 39, 46);    
+    font-size: 1.1rem;    
+    text-align: center;
+    padding-bottom: 4rem;
+  }
+
+
+
+img{
+    max-width: 100%;
+    
+}
+
+.gallery{
+    padding: 20px 0;
+}
+
+.gallery img{
+    border-radius: 15px;
+    width: 100%;    
+    cursor: pointer;
+    
+}
+
+
+.buttons {
+    padding: 10px;
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.col{
+    background-color: #ffffff;
+    gap: 5px;
+    padding-top: 12px;
+    
+}
+
+
+
+
+
+.background{
+    background-size: cover !important;
+    background-position: right !important;
+    
+}
+
+
+
+
+
+/* Footer */
+footer{
+    width: 100%;
+    height: 400px;
+    background-color: #248c9a;  
+    position: relative;
+    width: 100%;
+    height: 100vh; /* vh viewheight */
+    
+    
+}
+
+footer .grid{
+    grid-template-columns: repeat(5, 1fr); /* 5 columns 1fr each */
+    gap: 20px;
+    justify-content: center;
+    align-content: center;
+}
+
+footer h2{
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #d6d6d6;
+}
+footer p{
+    margin: 10px 0;
+    font-weight: 400;
+    
+}
+
+footer ul{
+    margin: 10px 0;
+    list-style: none;
+    color: #d6d6d6;
+}
+
+footer ul li a:hover{
+    text-decoration: underline;
+}
+
+footer a{
+    text-decoration: none;
+    color:  var(--gris600);
+}
+
+footer input{
+    margin: 10px 0;
+}
+
+footer input{
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+}
+
+footer input ::placeholder{
+    letter-spacing: 1px;
+    color: var(--gris600);
+}
+
+footer.btn{
+    width: 100%;
+}
+
+footer .social{
+    justify-content: flex-start;
+}
+
+/* Footer Copyright */
+div.copy{
+    width: 100%;
+    height: 35px;
+    background: #000000;
+    display: grid;
+    grid-template-columns: 100%; /* Is going to use a column which will take a 100% of all the 12 columns */
+    justify-items: center;
+    align-items: center;
+}
+
+div.copy p{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+    font-weight: 600px;
+}
+
+@media screen and (max-width:768px) {
+    .carousel-container {
+      display: flex;
+    }
+    .gallery{
+        height: 100%;
+    }
+    .footer{
+        display: flex;
+    }
+  }
+  
+  @media screen and (max-width:400px) {
+    .navigation .prev, .navigation .next {
+      top: 25%;
+    }
+    .gallery{
+        height: 100%;
+    }
+  }
